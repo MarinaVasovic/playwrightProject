@@ -19,7 +19,6 @@ test('Create bug report', async ({ page }) => {
   await issuePage.fillDescription("Bug description");
   await issuePage.clickOnCreateIssueButton();
   await expect(homePage.getTicketOnBoard(bugTitle)).toBeVisible();
-  await homePage.clickOnTicketOnBoard(bugTitle);
 });
 
 test('Delete ticket', async ({ page }) => {
